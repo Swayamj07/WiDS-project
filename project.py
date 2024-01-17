@@ -22,7 +22,7 @@ model_predictions = []
 N_test_observations = len(testing_data)
 
 for time_point in range(N_test_observations):
-    model = ARIMA(history, order=(4, 1, 0))
+    model = ARIMA(history, order=(3, 2, 1))
     model_fit = model.fit()
     output = model_fit.forecast()
     yhat = output[0]
